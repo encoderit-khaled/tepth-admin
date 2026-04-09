@@ -35,7 +35,7 @@ export default function AppTable<T>({ data, columns, onRowClick }: AppTableProps
         {/* Table Header */}
         <TableHeader className="bg-white">
           {table.getHeaderGroups().map((headerGroup) => (
-            <TableRow key={headerGroup.id}>
+            <TableRow key={headerGroup.id} className="hover:bg-transparent">
               {headerGroup.headers.map((header) => (
                 <TableHead
                   key={header.id}
@@ -64,7 +64,7 @@ export default function AppTable<T>({ data, columns, onRowClick }: AppTableProps
               {row.getVisibleCells().map((cell) => (
                 <TableCell
                   key={cell.id}
-                  className="text-start text-custom-table-header-text px-5 py-2 leading-tight"
+                  className="text-start text-custom-table-data-text px-5 py-2 leading-tight"
                 >
                   {flexRender(cell.column.columnDef.cell, cell.getContext())}
                 </TableCell>

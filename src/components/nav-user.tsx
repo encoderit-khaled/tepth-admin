@@ -43,7 +43,7 @@ export function NavUser() {
 
     delete api.defaults.headers.common["Authorization"];
 
-    // navigate({ to: "/login", replace: true });
+    navigate({ to: "/login", replace: true });
   }
 
   return (

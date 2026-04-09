@@ -116,6 +116,10 @@
     --radius-2xl: calc(var(--radius) * 1.8);
     --radius-3xl: calc(var(--radius) * 2.2);
     --radius-4xl: calc(var(--radius) * 2.6);
+    --color-custom-header-text: oklch(0.25 0 0);
+    --color-custom-table-header-text: oklch(0.4 0 0);
+    --color-custom-table-data-text: oklch(0.3 0 0);
+    --color-custom-footer-text-red: oklch(0.5 0.25 25);
 }
 
 @layer base {

@@ -27,7 +27,7 @@ function RouteComponent() {
     if (!isLoadingUser && !isFetching && !user && !hasRedirected.current) {
       hasRedirected.current = true;
       navigate({
-        // to: "/login",
+        to: "/login",
         replace: true,
       });
     }
@@ -42,9 +42,9 @@ function RouteComponent() {
     );
   }
 
-  // if (!user) {
-  //   return null; // redirect already triggered
-  // }
+  if (!user) {
+    return null; // redirect already triggered
+  }
 
   return (
     <SidebarProvider className="h-full w-full overflow-hidden">

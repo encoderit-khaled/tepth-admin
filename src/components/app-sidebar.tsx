@@ -8,26 +8,18 @@ import {
   SidebarTrigger,
   useSidebar,
 } from "./ui/sidebar";
-
-
 import { useRouterState } from "@tanstack/react-router";
-
 import { useCurrentUser } from "@/hooks/useCurrentUser";
-
 import Loading from "./base/loading";
 import { NavMain } from "./nav-main";
 import type { TRoute } from "@/types/route-paths";
 import {
   LayoutDashboard,
-  Users,
   MapPin,
-  Settings2,
-  ClipboardList,
-  Settings,
-  History
+  DollarSign,
+  BookOpen,
+  File
 } from "lucide-react";
-
-
 
 
 
@@ -53,41 +45,31 @@ export function AppSidebar(props: React.ComponentProps<typeof Sidebar>) {
       isVisible: true,
     },
     {
-      name: "Users",
-      url: "/users",
-      icon: Users,
-      isActive: isActiveLink(["/users"]),
+      name: "Exam Preparation Courses",
+      url: "/exam-preparation-courses",
+      icon: BookOpen,
+      isActive: isActiveLink(["/exam-preparation-courses"]),
     },
     {
-      name: "Service Area",
-      url: "/service-area",
+      name: "Testing Services",
+      url: "/testing-services",
+      icon: File,
+      isActive: isActiveLink(["/testing-services"]),
+    },
+    {
+      name: "Fees",
+      url: "/fees",
+      icon: DollarSign,
+      isActive: isActiveLink(["/fees"]),
+    },
+    {
+      name: "Our Venues",
+      url: "/our-venues",
       icon: MapPin,
-      isActive: isActiveLink(["/service-area"]),
+      isActive: isActiveLink(["/our-venues"]),
     },
-    {
-      name: "Services",
-      url: "/services",
-      icon: Settings2,
-      isActive: isActiveLink(["/services"]),
-    },
-    {
-      name: "Reports",
-      url: "/reports",
-      icon: ClipboardList,
-      isActive: isActiveLink(["/reports"]),
-    },
-    {
-      name: "Setting",
-      url: "/setting",
-      icon: Settings,
-      isActive: isActiveLink(["/setting"]),
-    },
-    {
-      name: "Service History",
-      url: "/service-history",
-      icon: History,
-      isActive: isActiveLink(["/service-history"]),
-    },
+
+
   ], [isActiveLink]);
 
   if (isLoading) {
@@ -114,7 +96,7 @@ export function AppSidebar(props: React.ComponentProps<typeof Sidebar>) {
       {open && (
         <SidebarFooter>
           <h1 className="text-xs text-custom-footer-text">
-            © <span className="text-custom-footer-text-red">OMG Security.</span>{" "}
+            © <span className="text-custom-footer-text-red">Tepth.</span>{" "}
             All Rights Reserved.
           </h1>
         </SidebarFooter>
